@@ -16,7 +16,7 @@ type DataTypes = ExcelFile<"DataTypes.xlsx">
 type DataTypesHeaderTrue = ExcelFile<"DataTypes.xlsx", HasHeaders=true>
 type DataTypesHeaderFalse = ExcelFile<"DataTypes.xlsx", HasHeaders=false, ForceString=true>
 type DataTypesNoHeader = ExcelFile<"DataTypesNoHeader.xlsx", HasHeaders=false>
-type CaseInsensitive = ExcelFile<"DataTypes.XLSX">
+type CaseInsensitive = ExcelFile<"DataTypes.xlsx">
 type MultiLine = ExcelFile<"MultilineHeader.xlsx">
 
 type MultipleSheetsFirst = ExcelFile<"MultipleSheets.xlsx", "A">
