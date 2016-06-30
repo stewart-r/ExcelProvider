@@ -206,7 +206,8 @@ let internal typExcel(cfg:TypeProviderConfig) =
           ProvidedStaticParameter("SheetName", typeof<string>, parameterDefaultValue = "") 
           ProvidedStaticParameter("Range", typeof<string>, parameterDefaultValue = "")
           ProvidedStaticParameter("HasHeaders", typeof<bool>, parameterDefaultValue = true)
-          ProvidedStaticParameter("ForceString", typeof<bool>, parameterDefaultValue = false) ]
+          ProvidedStaticParameter("ForceString", typeof<bool>, parameterDefaultValue = false)
+          ProvidedStaticParameter("GenerateFromSheets", typeof<bool>, parameterDefaultValue = false) ]
 
     let helpText = 
         """<summary>Typed representation of data in an Excel file.</summary>
@@ -214,7 +215,8 @@ let internal typExcel(cfg:TypeProviderConfig) =
            <param name='SheetName'>Name of sheet containing data. Defaults to first sheet.</param>
            <param name='Range'>Specification using `A1:D3` type addresses of one or more ranges. Defaults to use whole sheet.</param>
            <param name='HasHeaders'>Whether the range contains the names of the columns as its first line.</param>
-           <param name='ForceString'>Specifies forcing data to be processed as strings. Defaults to `false`.</param>"""
+           <param name='ForceString'>Specifies forcing data to be processed as strings. Defaults to `false`.</param>
+           <param name='GenerateFromSheets'>Specifies that the TypeProvider should generate . Defaults to `false`.</param>"""
 
     do excelFileProvidedType.AddXmlDoc helpText
     do excelFileProvidedType.DefineStaticParameters(parameters, buildTypes)
